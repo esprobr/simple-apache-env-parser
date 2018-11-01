@@ -1,0 +1,21 @@
+{
+  "name"  : "esprobr/simple-apache-env-parser",
+  "description": "Simple Apache Environment Config Files Parser",
+  "version" : "0.0.1",
+  "authors": [
+    {
+      "name": "Wesley Sousa",
+      "email": "wesleyyps@gmail.com"
+    }
+  ],
+  "require": {
+    "php": ">=5.6.0",
+
+    "gobie/regex": "dev-master"
+  },
+  "autoload": {
+    "psr-0": {
+      "Espro": "src/"
+    }
+  }
+}
