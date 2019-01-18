@@ -53,7 +53,8 @@ class Parser
                 foreach($lines as $line) {
                     $include = $this->regex->get(self::INCLUDE_PATTERN, $line);
                     if(isset($include['file'])) {
-                        if(dirname($include['file']) != $include['file']) {
+                        $dirName = dirname($include['file']);
+                        if($dirName.str_replace($dirName, '', $include['file']) != $include['file']) {
                             $include['file'] = dirname($_filePath) . '/' . $include['file'];
                         }
 
@@ -78,7 +79,7 @@ class Parser
                 }
             }
         } else {
-            throw new Exception("File not found!", 0);
+            throw new Exception("File \"{$_filePath}\"not found!", 0);
         };
     }
 }
