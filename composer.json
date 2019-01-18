@@ -1,5 +1,6 @@
 {
   "name"  : "esprobr/simple-apache-env-parser",
+  "license": "GPL-2.0-only",
   "description": "Simple Apache Environment Config Files Parser",
   "version" : "0.0.1",
   "authors": [
