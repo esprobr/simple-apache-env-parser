@@ -10,7 +10,7 @@ use Gobie\Regex\Wrappers\RegexFacade;
 class Parser
 {
     const INCLUDE_PATTERN = '@^include\s+(?P<file>[\w\-_/\.]+)@i';
-    const VARIABLE_PATTERN = '/^(?:setenv|fastcgi_param)\s+(?:"|\')?(?P<key>[_a-zA-Z]{1}[\w\d\._]*)(?:"|\')?\s+(?:"|\')?(?P<value>[\s\w\d\.\@\!\#\$\%\¨\&\*\(\)_\-\+\=\[\{\}\]\?\/\:\\\|àáâãåäæèéêëìíîïòóôõöøùúûüç§]*)(?:"|\')?(?:\n|\r)*$/iu';
+    const VARIABLE_PATTERN = '/^(?:setenv|fastcgi_param)\s+(?:"|\')?(?P<key>[_a-zA-Z]{1}[\w\d\._]*)(?:"|\')?\s+(?:"|\')?(?P<value>[\s\w\d\.\@\!\#\$\%\¨\&\*\(\)_\-\+\=\[\{\}\]\?\/\:\\\|àáâãåäæèéêëìíîïòóôõöøùúûüç§]*)(?:"|\')?(?:\n|\r)*(?:;)?$/iu';
 
     protected $regex;
     protected $putEnv;
